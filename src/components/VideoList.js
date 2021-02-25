@@ -1,7 +1,7 @@
 import React from 'react';
 import VideoItem from './VideoItem';
 
-const VideoList = ({ videoList, videoDetails }) => {
+const VideoList = ({ videoList, videoDetails, authorDetailsPage }) => {
     return (
         videoList.map(function (video, index) {
             return (
@@ -9,6 +9,7 @@ const VideoList = ({ videoList, videoDetails }) => {
                     snippet={video.snippet}
                     index={index}
                     videoDetails={videoDetails}
+                    authorDetailsPage={authorDetailsPage}
                 />
             );
         })

@@ -1,7 +1,6 @@
 import React from 'react';
 
 const VideoPageDetails = ({ videoData }) => {
-  console.log(videoData);
   return (
     <section className="text-gray-700 body-font overflow-hidden bg-white">
       <div className="container px-5 py-12 mx-auto">
