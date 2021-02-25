@@ -15,7 +15,7 @@ const SearchPage = (props) => {
     const searchAPI = async () => {
         try {
             if (!(input === "")) {
-                const response = await fetch("https://youtube.googleapis.com/youtube/v3/search?part=snippet&q=" + input + "&order=relevance&type=video&key=AIzaSyDXIonUanW36WrIwG04nbWPd6ACaIQl0P4");
+                const response = await fetch("https://youtube.googleapis.com/youtube/v3/search?part=snippet&q=" + input + "&order=relevance&type=video&maxResults=50&key=AIzaSyDXIonUanW36WrIwG04nbWPd6ACaIQl0P4");
 
                 const responseData = await response.json();
                 setVideoList(responseData.items);
@@ -55,8 +55,11 @@ const SearchPage = (props) => {
             <div className="font-sans m-8">
                 <h1 className="text-xl font-bold">Video List</h1>
                 <SearchBar searchFunction={searchFunction} />
+                <div className="grid grid-cols-3 gap-2">
                 <VideoList videoList={videoList}
                     videoDetails={videoDetails} />
+                </div>
+
             </div>);
     } else {
         return (

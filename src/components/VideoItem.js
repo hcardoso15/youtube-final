@@ -4,7 +4,7 @@ const VideoItem = ({ snippet, index, videoDetails }) => {
     var d = new Date(snippet.publishedAt);
     var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
     return (
-        <div className="mt-4 mb-4 bg-white overflow-hidden border-b-4 border-blue-500 w-1/3" key={index}
+        <div className="mt-4 mb-4 bg-white overflow-hidden border-b-4 border-blue-500" key={index}
             onClick={e => videoDetails(index, e)}>
             <img src={snippet.thumbnails.high.url} alt="Thumbnail" className="w-full object-cover h-32 sm:h-48 md:h-64"></img>
             <div className="p-4 md:p-6">
