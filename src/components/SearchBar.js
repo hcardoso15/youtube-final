@@ -13,7 +13,7 @@ const SearchBar = ({ searchFunction }) => {
                 onKeyUp={event => setValue(event.target.value)} />
             <button
                 type="button"
-                className="ml-4 py-2 px-4 bg-transparent text-red-600 font-semibold border border-red-600 rounded hover:bg-red-600 hover:text-white hover:border-transparent transition ease-in duration-200 transform"
+                className="ml-4 py-2 px-4 bg-blue-500 text-white font-semibold border border-red-600 rounded hover:bg-blue-800 hover:border-transparent transition ease-in duration-200 transform"
                 onClick={e => searchFunction(value, e)}>Search</button>
         </div>
     );

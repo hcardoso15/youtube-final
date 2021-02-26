@@ -9,13 +9,13 @@ import VideoPageDetails from './VideoPageDetails';
 async function searchChannel(videoList, clickedItem) {
     if (videoList.length && clickedItem != -1) {
         let channelId = videoList[clickedItem].snippet.channelId;
-        const response = await fetch("https://www.googleapis.com/youtube/v3/channels?part=snippet&id=" + channelId + "&key=AIzaSyAEBopW6Kq4BLZ-v4I9vDeBIkl-_5VIXaA").then((response) => response.json());
+        const response = await fetch("https://www.googleapis.com/youtube/v3/channels?part=snippet&id=" + channelId + 
+        "&key=AIzaSyAEBopW6Kq4BLZ-v4I9vDeBIkl-_5VIXaA").then((response) => response.json());
         return response;
-
     }
 };
 
-const SearchPage = (props) => {
+const SearchPage = () => {
     const [input, setInput] = useState('');
     const [videoList, setVideoList] = useState([]);
     const [state, setState] = useState('search')
@@ -92,7 +92,8 @@ const SearchPage = (props) => {
                 <h1 className="text-xl font-bold">Video List</h1>
                 <SearchBar searchFunction={searchFunction} />
                 <div className="grid grid-cols-3 gap-2">
-                    <VideoList videoList={videoList}
+                    <VideoList 
+                        videoList={videoList}
                         videoDetails={videoDetails}
                         authorDetailsPage={authorDetailsPage} />
                 </div>

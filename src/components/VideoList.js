@@ -8,7 +8,7 @@ const VideoList = ({ videoList, videoDetails, authorDetailsPage }) => {
                 <VideoItem
                     snippet={video.snippet}
                     index={index}
-                    videoDetails={videoDetails}
+                    videoDetails={videoDetails}touch
                     authorDetailsPage={authorDetailsPage}
                 />
             );
